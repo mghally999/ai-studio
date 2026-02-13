@@ -1,0 +1,217 @@
+.page {
+  display: grid;
+  gap: 14px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 14px;
+  padding: 18px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--stroke);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--accent) 12%, var(--panel2)),
+    color-mix(in srgb, var(--accent2) 10%, var(--panel))
+  );
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 40%, transparent),
+    color-mix(in srgb, var(--accent2) 40%, transparent)
+  );
+  opacity: 0.2;
+  filter: blur(22px);
+  pointer-events: none;
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.h1 {
+  margin: 10px 0 0;
+  font-size: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.6px;
+  font-weight: 950;
+}
+
+.p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 58ch;
+}
+
+.actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.primary {
+  border-radius: 14px;
+  border: 1px solid transparent;
+  padding: 10px 14px;
+  font-weight: 950;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: var(--btnText);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 150ms ease,
+    opacity 150ms ease;
+}
+.primary:hover {
+  transform: translateY(-1px);
+  opacity: 0.96;
+}
+
+.secondary {
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  padding: 10px 14px;
+  font-weight: 900;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  color: var(--text);
+  transition:
+    transform 150ms ease,
+    background 150ms ease;
+}
+.secondary:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--panel2) 70%, transparent);
+}
+
+.heroRight {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  position: relative;
+}
+
+.orb {
+  position: absolute;
+  right: -40px;
+  top: -30px;
+  width: 180px;
+  height: 180px;
+  background:
+    radial-gradient(circle at 30% 30%, var(--accent), transparent 55%),
+    radial-gradient(circle at 60% 60%, var(--accent2), transparent 60%);
+  filter: blur(12px);
+  opacity: 0.55;
+}
+
+.stat {
+  padding: 14px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+}
+.statLabel {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.statValue {
+  margin-top: 8px;
+  font-size: 26px;
+  font-weight: 950;
+  letter-spacing: -0.6px;
+}
+.statSub {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card,
+.cardWide {
+  padding: 16px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+}
+.card:hover,
+.cardWide:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--panel2) 72%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--stroke));
+}
+
+.cardTitle {
+  font-weight: 950;
+  letter-spacing: -0.2px;
+}
+.cardDesc {
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.cardFoot {
+  margin-top: 14px;
+  font-weight: 900;
+  opacity: 0.9;
+}
+
+.cardWide {
+  grid-column: 1 / -1;
+}
+
+.list {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+}
+.time {
+  color: var(--muted);
+  font-weight: 900;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

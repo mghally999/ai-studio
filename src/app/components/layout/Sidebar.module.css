@@ -1,0 +1,150 @@
+.sidebar {
+  height: 100%;
+  padding: 16px;
+  border-right: 1px solid var(--stroke);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--panel) 65%, transparent),
+      transparent
+    ),
+    color-mix(in srgb, var(--bg) 85%, black);
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 10px 14px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  background:
+    radial-gradient(
+      14px 14px at 30% 30%,
+      rgba(255, 255, 255, 0.85),
+      transparent 55%
+    ),
+    linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: var(--shadow);
+  border: 1px solid color-mix(in srgb, var(--stroke) 65%, transparent);
+}
+
+.brandName {
+  font-weight: 950;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.brandSub {
+  margin-top: 3px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.sectionTitle {
+  margin: 12px 10px 8px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav {
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  padding: 12px 12px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  background: color-mix(in srgb, var(--panel) 55%, transparent);
+  transition:
+    transform 150ms ease,
+    background 150ms ease,
+    border-color 150ms ease;
+}
+
+.item:hover {
+  transform: translateY(-1px);
+  border-color: var(--stroke);
+  background: color-mix(in srgb, var(--panel2) 70%, transparent);
+}
+
+.active {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--stroke));
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--accent) 12%, var(--panel2)),
+    color-mix(in srgb, var(--accent2) 10%, var(--panel))
+  );
+  box-shadow: 0 18px 70px rgba(0, 0, 0, 0.28);
+}
+
+.itemTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.itemLabel {
+  font-weight: 900;
+}
+
+.pip {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  opacity: 0.9;
+}
+
+.itemSub {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.footer {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+}
+
+.footerCard {
+  padding: 14px;
+  border-radius: 18px;
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+}
+
+.footerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.footerTitle {
+  font-weight: 950;
+}
+.badge {
+  font-size: 11px;
+  font-weight: 900;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel2) 70%, transparent);
+}
+
+.footerSub {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}

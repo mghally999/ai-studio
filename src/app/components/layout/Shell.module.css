@@ -1,0 +1,26 @@
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  position: relative;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 5;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: var(--topbar-h) 1fr;
+  min-width: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.content {
+  padding: 18px 18px 28px;
+  min-width: 0;
+}

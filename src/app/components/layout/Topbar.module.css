@@ -1,0 +1,115 @@
+.topbar {
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 55%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-weight: 950;
+  letter-spacing: -0.35px;
+  font-size: 16px;
+}
+.sub {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.themeGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 6px;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--panel) 60%, transparent);
+}
+
+.themeChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    transform 150ms ease,
+    background 150ms ease,
+    color 150ms ease,
+    border-color 150ms ease;
+}
+.themeChip:hover {
+  transform: translateY(-1px);
+  color: var(--text);
+  background: color-mix(in srgb, var(--panel2) 65%, transparent);
+}
+.themeChipActive {
+  color: var(--text);
+  border-color: var(--stroke);
+  background: color-mix(in srgb, var(--panel2) 75%, transparent);
+}
+
+.themeSwatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+/* Give each chip its own identity preview */
+.themeChip[data-chip="mono"] .themeSwatch {
+  background: linear-gradient(135deg, #fff, #bdbdbd);
+}
+.themeChip[data-chip="noir"] .themeSwatch {
+  background: linear-gradient(135deg, #9ae6ff, #8b5cf6);
+}
+.themeChip[data-chip="cobalt"] .themeSwatch {
+  background: linear-gradient(135deg, #60a5fa, #22d3ee);
+}
+.themeChip[data-chip="ultra"] .themeSwatch {
+  background: linear-gradient(135deg, #a78bfa, #22d3ee);
+}
+/* Give each chip its own identity preview */
+.themeChip[data-chip="mono"] .themeSwatch {
+  background: linear-gradient(135deg, #ffffff, #bdbdbd);
+}
+
+.themeChip[data-chip="noir"] .themeSwatch {
+  background: linear-gradient(135deg, #9ae6ff, #8b5cf6);
+}
+
+.themeChip[data-chip="cobalt"] .themeSwatch {
+  background: linear-gradient(135deg, #60a5fa, #22d3ee);
+}
+
+.themeChip[data-chip="ultra"] .themeSwatch {
+  background: linear-gradient(135deg, #a78bfa, #22d3ee);
+}
+
+.themeChip[data-chip="ice"] .themeSwatch {
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+}

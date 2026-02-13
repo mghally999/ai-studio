@@ -1,0 +1,17 @@
+.select {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  color: var(--text);
+  padding: 11px 12px;
+  outline: none;
+  transition:
+    border-color 140ms ease,
+    background 140ms ease;
+}
+
+.select:focus {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--stroke));
+  background: color-mix(in srgb, var(--panel2) 75%, transparent);
+}

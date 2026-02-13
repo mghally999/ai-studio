@@ -1,0 +1,251 @@
+.page {
+  min-height: 100vh;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.bg {
+  position: absolute;
+  inset: -10%;
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      color-mix(in srgb, var(--accent) 35%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      color-mix(in srgb, var(--accent2) 35%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0.45), transparent 60%);
+  filter: blur(12px);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 65%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: var(--shadow);
+  border: 1px solid var(--stroke);
+}
+
+.brandName {
+  font-weight: 950;
+  letter-spacing: 0.2px;
+}
+.brandSub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.link {
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 65%, transparent);
+  font-weight: 900;
+  font-size: 13px;
+  transition:
+    transform 140ms ease,
+    background 140ms ease;
+}
+.link:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--panel2) 75%, transparent);
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 14px;
+}
+
+.left,
+.right {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 60%, transparent);
+  backdrop-filter: blur(14px);
+  padding: 18px;
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.h1 {
+  margin: 10px 0 0;
+  font-size: 34px;
+  line-height: 1.05;
+  letter-spacing: -0.8px;
+  font-weight: 950;
+}
+
+.p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 62ch;
+}
+
+.ctaRow {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-weight: 950;
+  border: 1px solid transparent;
+  transition:
+    transform 140ms ease,
+    opacity 140ms ease;
+}
+.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: var(--btnText);
+  box-shadow: var(--shadow);
+}
+.secondary {
+  border-color: var(--stroke);
+  background: color-mix(in srgb, var(--panel2) 70%, transparent);
+  color: var(--text);
+}
+
+.primary:hover,
+.secondary:hover {
+  transform: translateY(-1px);
+  opacity: 0.97;
+}
+
+.features {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature {
+  border-radius: 18px;
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  padding: 12px;
+}
+
+.featureTitle {
+  font-weight: 950;
+}
+.featureSub {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.previewCard {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--stroke);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--accent) 10%, var(--panel2)),
+    color-mix(in srgb, var(--accent2) 10%, var(--panel))
+  );
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.previewTop {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 55%, transparent);
+}
+.previewDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--text) 40%, transparent);
+}
+
+.previewBody {
+  padding: 14px;
+}
+.previewTitle {
+  font-weight: 950;
+}
+.previewText {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.previewGrid {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.previewTile {
+  height: 110px;
+  border-radius: 18px;
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 65%, transparent);
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .features {
+    grid-template-columns: 1fr;
+  }
+}

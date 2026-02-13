@@ -1,0 +1,6 @@
+.card {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  padding: 14px;
+}
