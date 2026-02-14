@@ -1,0 +1,23 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {
+      "offset": {
+        "line": 46,
+        "column": 0
+      },
+      "map": {
+        "version": 3,
+        "sources": [
+          "file:///Users/JavaScript-Artist/Desktop/ai-studio/src/app/api/content/generate/route.js"
+        ],
+        "sourcesContent": [
+          "import { NextResponse } from \"next/server\";\nimport { generateText } from \"@/lib/http/providers/gemini\";\n\nexport async function POST(req) {\n  try {\n    const { prompt } = await req.json();\n\n    if (!prompt) {\n      return NextResponse.json(\n        { error: \"Prompt is required\" },\n        { status: 400 }\n      );\n    }\n\n    const result = await generateText(prompt);\n\n    return NextResponse.json({ result });\n  } catch (error) {\n    return NextResponse.json({ error: error.message }, { status: 500 });\n  }\n}\n"
+        ],
+        "names": [],
+        "mappings": ";;;;AAAA;;;;;;;;AAGO,eAAe,KAAK,GAAG;IAC5B,IAAI;QACF,MAAM,EAAE,MAAM,EAAE,GAAG,MAAM,IAAI,IAAI;QAEjC,IAAI,CAAC,QAAQ;YACX,OAAO,gJAAY,CAAC,IAAI,CACtB;gBAAE,OAAO;YAAqB,GAC9B;gBAAE,QAAQ;YAAI;QAElB;QAEA,MAAM,SAAS,MAAM,aAAa;QAElC,OAAO,gJAAY,CAAC,IAAI,CAAC;YAAE;QAAO;IACpC,EAAE,OAAO,OAAO;QACd,OAAO,gJAAY,CAAC,IAAI,CAAC;YAAE,OAAO,MAAM,OAAO;QAAC,GAAG;YAAE,QAAQ;QAAI;IACnE;AACF"
+      }
+    }
+  ]
+}

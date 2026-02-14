@@ -1,0 +1,72 @@
+/* [project]/src/app/components/studio/PromptComposer.module.css [app-client] (css) */
+.PromptComposer-module__FkCOCG__wrap {
+  gap: 10px;
+  display: grid;
+}
+
+.PromptComposer-module__FkCOCG__top {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  display: flex;
+}
+
+.PromptComposer-module__FkCOCG__title {
+  letter-spacing: -.2px;
+  font-weight: 950;
+}
+
+.PromptComposer-module__FkCOCG__sub {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.PromptComposer-module__FkCOCG__actions {
+  gap: 8px;
+  display: flex;
+}
+
+.PromptComposer-module__FkCOCG__chips {
+  flex-wrap: wrap;
+  gap: 8px;
+  display: flex;
+}
+
+.PromptComposer-module__FkCOCG__chip {
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  transition: transform .14s, background .14s;
+}
+
+.PromptComposer-module__FkCOCG__chip:hover {
+  background: color-mix(in srgb, var(--panel2) 70%, transparent);
+  transform: translateY(-1px);
+}
+
+.PromptComposer-module__FkCOCG__textarea {
+  resize: vertical;
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  min-height: 170px;
+  color: var(--text);
+  border-radius: 18px;
+  outline: none;
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.PromptComposer-module__FkCOCG__textarea:focus {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--stroke));
+  background: color-mix(in srgb, var(--panel2) 75%, transparent);
+}
+
+/*# sourceMappingURL=src_app_components_studio_PromptComposer_module_css_bad6b30c._.single.css.map*/

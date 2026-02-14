@@ -1,0 +1,265 @@
+/* [project]/src/app/components/ui/Card.module.css [app-client] (css) */
+.Card-module__qLhDLW__card {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  padding: 14px;
+}
+
+/* [project]/src/app/components/ui/Select.module.css [app-client] (css) */
+.Select-module__Gugc6G__select {
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  width: 100%;
+  color: var(--text);
+  border-radius: 14px;
+  outline: none;
+  padding: 11px 12px;
+  transition: border-color .14s, background .14s;
+}
+
+.Select-module__Gugc6G__select:focus {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--stroke));
+  background: color-mix(in srgb, var(--panel2) 75%, transparent);
+}
+
+/* [project]/src/app/components/studio/GeneratePanel.module.css [app-client] (css) */
+.GeneratePanel-module__0838MG__card {
+  padding: 14px;
+}
+
+.GeneratePanel-module__0838MG__head {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.GeneratePanel-module__0838MG__title {
+  letter-spacing: -.2px;
+  font-weight: 950;
+}
+
+.GeneratePanel-module__0838MG__sub {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.GeneratePanel-module__0838MG__buttons {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  display: flex;
+}
+
+.GeneratePanel-module__0838MG__body {
+  gap: 12px;
+  display: grid;
+}
+
+/* [project]/src/app/components/studio/PromptComposer.module.css [app-client] (css) */
+.PromptComposer-module__FkCOCG__wrap {
+  gap: 10px;
+  display: grid;
+}
+
+.PromptComposer-module__FkCOCG__top {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  display: flex;
+}
+
+.PromptComposer-module__FkCOCG__title {
+  letter-spacing: -.2px;
+  font-weight: 950;
+}
+
+.PromptComposer-module__FkCOCG__sub {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.PromptComposer-module__FkCOCG__actions {
+  gap: 8px;
+  display: flex;
+}
+
+.PromptComposer-module__FkCOCG__chips {
+  flex-wrap: wrap;
+  gap: 8px;
+  display: flex;
+}
+
+.PromptComposer-module__FkCOCG__chip {
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  transition: transform .14s, background .14s;
+}
+
+.PromptComposer-module__FkCOCG__chip:hover {
+  background: color-mix(in srgb, var(--panel2) 70%, transparent);
+  transform: translateY(-1px);
+}
+
+.PromptComposer-module__FkCOCG__textarea {
+  resize: vertical;
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  min-height: 170px;
+  color: var(--text);
+  border-radius: 18px;
+  outline: none;
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.PromptComposer-module__FkCOCG__textarea:focus {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--stroke));
+  background: color-mix(in srgb, var(--panel2) 75%, transparent);
+}
+
+/* [project]/src/app/(studio)/content/content.module.css [app-client] (css) */
+.content-module__izyzTG__page {
+  gap: 14px;
+  display: grid;
+}
+
+.content-module__izyzTG__grid {
+  grid-template-columns: .95fr 1.05fr;
+  gap: 14px;
+  display: grid;
+}
+
+.content-module__izyzTG__left {
+  padding: 14px;
+}
+
+.content-module__izyzTG__right {
+  gap: 12px;
+  display: grid;
+}
+
+.content-module__izyzTG__header {
+  margin-bottom: 12px;
+}
+
+.content-module__izyzTG__title {
+  letter-spacing: -.2px;
+  font-size: 16px;
+  font-weight: 950;
+}
+
+.content-module__izyzTG__sub {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.content-module__izyzTG__tplList {
+  gap: 10px;
+  display: grid;
+}
+
+.content-module__izyzTG__tpl {
+  text-align: left;
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  cursor: pointer;
+  border: 1px solid #0000;
+  border-radius: 18px;
+  padding: 12px;
+  transition: transform .16s, border-color .16s, background .16s;
+}
+
+.content-module__izyzTG__tpl:hover {
+  border-color: var(--stroke);
+  background: color-mix(in srgb, var(--panel2) 72%, transparent);
+  transform: translateY(-1px);
+}
+
+.content-module__izyzTG__tplActive {
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--stroke));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, var(--panel2)), color-mix(in srgb, var(--accent2) 8%, var(--panel)));
+  box-shadow: 0 18px 70px #00000040;
+}
+
+.content-module__izyzTG__tplTop {
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.content-module__izyzTG__tplTitle {
+  font-weight: 950;
+}
+
+.content-module__izyzTG__tplDot {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  opacity: .9;
+  border-radius: 999px;
+  width: 10px;
+  height: 10px;
+}
+
+.content-module__izyzTG__tplSub {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.content-module__izyzTG__controls {
+  gap: 10px;
+  margin-top: 12px;
+  display: grid;
+}
+
+.content-module__izyzTG__row {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  display: grid;
+}
+
+.content-module__izyzTG__label {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media (max-width: 1100px) {
+  .content-module__izyzTG__grid, .content-module__izyzTG__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content-module__izyzTG__right {
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0;
+  display: flex;
+}
+
+.content-module__izyzTG__results {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+/*# sourceMappingURL=src_app_e72a692c._.css.map*/

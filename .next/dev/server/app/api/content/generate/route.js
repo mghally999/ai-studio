@@ -1,0 +1,11 @@
+var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/api/content/generate/route.js")
+R.c("server/chunks/[root-of-the-server]__6bb651d6._.js")
+R.c("server/chunks/node_modules_next_03d71145._.js")
+R.c("server/chunks/node_modules_google-auth-library_3bf37d50._.js")
+R.c("server/chunks/node_modules_ws_4eadb33f._.js")
+R.c("server/chunks/node_modules_@google_genai_dist_node_index_mjs_0d0d6908._.js")
+R.c("server/chunks/node_modules_5ef56704._.js")
+R.c("server/chunks/[root-of-the-server]__087fcf30._.js")
+R.c("server/chunks/_next-internal_server_app_api_content_generate_route_actions_bbc67c9a.js")
+R.m("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/src/app/api/content/generate/route.js [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/src/app/api/content/generate/route.js [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

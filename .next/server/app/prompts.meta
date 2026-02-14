@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(studio)/layout,_N_T_/(studio)/prompts/layout,_N_T_/(studio)/prompts/page,_N_T_/prompts"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KHN0dWRpbyk/prompts/__PAGE__",
+    "/!KHN0dWRpbyk/prompts",
+    "/!KHN0dWRpbyk",
+    "/_index",
+    "/_head"
+  ]
+}

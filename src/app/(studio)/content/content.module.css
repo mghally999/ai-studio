@@ -44,9 +44,7 @@
   padding: 12px;
   background: color-mix(in srgb, var(--panel) 70%, transparent);
   cursor: pointer;
-  transition:
-    transform 160ms ease,
-    border-color 160ms ease,
+  transition: transform 160ms ease, border-color 160ms ease,
     background 160ms ease;
 }
 .tpl:hover {
@@ -113,4 +111,16 @@
   .row {
     grid-template-columns: 1fr;
   }
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0;
+}
+
+.results {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
 }

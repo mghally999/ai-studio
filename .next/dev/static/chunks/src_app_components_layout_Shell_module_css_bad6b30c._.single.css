@@ -1,0 +1,29 @@
+/* [project]/src/app/components/layout/Shell.module.css [app-client] (css) */
+.Shell-module__W7GSTq__shell {
+  grid-template-columns: var(--sidebar-w) 1fr;
+  min-height: 100vh;
+  display: grid;
+  position: relative;
+}
+
+.Shell-module__W7GSTq__sidebar {
+  z-index: 5;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.Shell-module__W7GSTq__main {
+  grid-template-rows: var(--topbar-h) 1fr;
+  z-index: 5;
+  min-width: 0;
+  display: grid;
+  position: relative;
+}
+
+.Shell-module__W7GSTq__content {
+  min-width: 0;
+  padding: 18px 18px 28px;
+}
+
+/*# sourceMappingURL=src_app_components_layout_Shell_module_css_bad6b30c._.single.css.map*/

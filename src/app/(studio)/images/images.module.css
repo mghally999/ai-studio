@@ -43,9 +43,7 @@
   padding: 12px;
   background: color-mix(in srgb, var(--panel) 70%, transparent);
   cursor: pointer;
-  transition:
-    transform 160ms ease,
-    border-color 160ms ease,
+  transition: transform 160ms ease, border-color 160ms ease,
     background 160ms ease;
 }
 .tpl:hover {

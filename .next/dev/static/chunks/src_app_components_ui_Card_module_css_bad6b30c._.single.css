@@ -1,0 +1,9 @@
+/* [project]/src/app/components/ui/Card.module.css [app-client] (css) */
+.Card-module__qLhDLW__card {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  padding: 14px;
+}
+
+/*# sourceMappingURL=src_app_components_ui_Card_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,78 @@
+/* [project]/src/app/components/ui/Button.module.css [app-client] (css) */
+.Button-module__Vsi6oa__btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  border: 1px solid #0000;
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-weight: 950;
+  transition: transform .14s, opacity .14s, background .14s, border-color .14s;
+}
+
+.Button-module__Vsi6oa__btn:hover {
+  opacity: .98;
+  transform: translateY(-1px);
+}
+
+.Button-module__Vsi6oa__btn:active {
+  opacity: .95;
+  transform: translateY(0);
+}
+
+.Button-module__Vsi6oa__sm {
+  border-radius: 12px;
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.Button-module__Vsi6oa__md {
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+.Button-module__Vsi6oa__lg {
+  border-radius: 16px;
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+.Button-module__Vsi6oa__full {
+  width: 100%;
+}
+
+.Button-module__Vsi6oa__primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: var(--btnText);
+  box-shadow: var(--shadow);
+}
+
+.Button-module__Vsi6oa__secondary {
+  background: color-mix(in srgb, var(--panel2) 80%, transparent);
+  color: var(--text);
+  border-color: var(--stroke);
+}
+
+.Button-module__Vsi6oa__outline {
+  color: var(--text);
+  border-color: var(--stroke);
+  background: none;
+}
+
+.Button-module__Vsi6oa__ghost {
+  color: var(--text);
+  background: none;
+  border-color: #0000;
+}
+
+.Button-module__Vsi6oa__danger {
+  color: #12060a;
+  box-shadow: var(--shadow);
+  background: linear-gradient(135deg, #ff5a7a, #ffb86b);
+}
+
+.Button-module__Vsi6oa__glow {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent), 0 20px 80px #00000059;
+}
+
+/*# sourceMappingURL=src_app_components_ui_Button_module_css_bad6b30c._.single.css.map*/

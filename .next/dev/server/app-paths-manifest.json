@@ -1,0 +1,10 @@
+{
+  "/(studio)/content/page": "app/(studio)/content/page.js",
+  "/(studio)/images/page": "app/(studio)/images/page.js",
+  "/(studio)/projects/page": "app/(studio)/projects/page.js",
+  "/(studio)/studio/page": "app/(studio)/studio/page.js",
+  "/(studio)/videos/page": "app/(studio)/videos/page.js",
+  "/api/content/generate/route": "app/api/content/generate/route.js",
+  "/api/images/generate/route": "app/api/images/generate/route.js",
+  "/api/videos/generate/route": "app/api/videos/generate/route.js"
+}

@@ -41,19 +41,23 @@ function applyTheme(themeId, fontUi) {
 }
 
 export default function Providers({ children }) {
-  const [themeId, setThemeId] = useState(() => {
-    if (typeof window === "undefined") return "noir";
-    try {
-      return localStorage.getItem("ai_studio_theme") || "noir";
-    } catch {
-      return "noir";
-    }
-  });
+  // ✅ MAKE ICE DEFAULT (server + client)
+  const [themeId, setThemeId] = useState("ice");
 
   const active = useMemo(
-    () => THEMES.find((t) => t.id === themeId) || THEMES[1],
-    [themeId],
+    () => THEMES.find((t) => t.id === themeId) || THEMES[3],
+    [themeId]
   );
+
+  // Load from localStorage AFTER mount
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("ai_studio_theme");
+      if (saved) {
+        setThemeId(saved);
+      }
+    } catch {}
+  }, []);
 
   useEffect(() => {
     applyTheme(themeId, active.fontUi);
@@ -64,7 +68,7 @@ export default function Providers({ children }) {
 
   const value = useMemo(
     () => ({ themes: THEMES, themeId, setThemeId, active }),
-    [themeId, active],
+    [themeId, active]
   );
 
   return (

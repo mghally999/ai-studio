@@ -1,0 +1,38 @@
+[00:00:02.637] Server  LOG     ✓ Ready in 1710ms
+[00:00:06.088] Server  LOG     ○ Compiling /content ...
+[00:00:12.118] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:18.756] Browser ERROR   {}
+[00:00:30.743] Browser ERROR   {}
+[00:03:03.343] Server  LOG     ✓ Compiled in 123ms
+[00:03:27.262] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:03.920] Browser ERROR   {}
+[00:06:22.513] Server  LOG     ✓ Compiled in 82ms
+[00:06:27.163] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:35.789] Browser LOG     API RESPONSE: {"result":{"data":[{"imageURL":"https://im.runware.ai/image/ws/2/ii/c8d89a85-b616-494a-aaf6-66b4b8d58b09.jpg","imageUUID":"c8d89a85-b616-494a-aaf6-66b4b8d58b09","seed":4227589134,"taskType":"imageInference","taskUUID":"aecbfaaf-feb7-4bd1-9a2b-843f2632eea3"},{"imageURL":"https://im.runware.ai/image/ws/2/ii/af9e5c45-c139-4721-a5ae-4b50989006a4.jpg","imageUUID":"af9e5c45-c139-4721-a5ae-4b50989006a4","seed":4227589135,"taskType":"imageInference","taskUUID":"aecbfaaf-feb7-4bd1-9a2b-843f2632eea3"}]}}
+[00:07:32.552] Server  LOG     ✓ Compiled in 79ms
+[00:07:36.771] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:47.593] Browser ERROR   {}
+[00:14:08.137] Browser ERROR   {}
+[00:14:11.696] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:25.950] Browser ERROR   {}
+[00:15:11.359] Browser ERROR   {}
+[00:15:13.946] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:16.392] Browser ERROR   {}
+[00:17:11.183] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:16.485] Browser ERROR   {}
+[00:18:20.586] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:23.336] Server  ERROR   ⨯ No HTTP methods exported in '[project]/src/app/api/content/generate/route.js'. Export a named export for each HTTP method.
+[00:18:23.463] Browser ERROR   {}
+[00:19:47.888] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:51.361] Browser ERROR   {}
+[00:21:28.703] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:16.359] Server  LOG     ✓ Compiled in 90ms
+[00:35:29.151] Browser WARN    GSAP target [data-anim='p'] not found. https://gsap.com
+[00:35:29.151] Browser WARN    GSAP target  not found. https://gsap.com
+[00:35:29.151] Browser WARN    GSAP target [data-anim='p'] not found. https://gsap.com
+[00:35:29.151] Browser WARN    GSAP target  not found. https://gsap.com
+[00:35:55.117] Browser ERROR   {}
+[00:42:04.546] Server  LOG     ✓ Compiled in 135ms
+[00:42:31.703] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:44:35.562] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:46:05.813] Server  LOG     ✓ Compiled in 16ms

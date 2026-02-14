@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/components/ui/Tabs.module.css"],"sourcesContent":[".tabs {\n  display: flex;\n  gap: 8px;\n  flex-wrap: wrap;\n  padding: 6px;\n  border-radius: 999px;\n  border: 1px solid var(--stroke);\n  background: color-mix(in srgb, var(--panel) 65%, transparent);\n}\n\n.tab {\n  border: 1px solid transparent;\n  background: transparent;\n  color: var(--muted);\n  padding: 8px 12px;\n  border-radius: 999px;\n  cursor: pointer;\n  font-weight: 900;\n  transition:\n    background 140ms ease,\n    color 140ms ease,\n    border-color 140ms ease,\n    transform 140ms ease;\n}\n\n.tab:hover {\n  transform: translateY(-1px);\n  color: var(--text);\n}\n.active {\n  color: var(--text);\n  background: color-mix(in srgb, var(--panel2) 70%, transparent);\n  border-color: var(--stroke);\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;AAUA;;;;;;;;;;;AAeA;;;;;AAIA"}}]
+}

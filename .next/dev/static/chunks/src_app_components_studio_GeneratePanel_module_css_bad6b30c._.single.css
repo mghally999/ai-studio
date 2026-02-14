@@ -1,0 +1,38 @@
+/* [project]/src/app/components/studio/GeneratePanel.module.css [app-client] (css) */
+.GeneratePanel-module__0838MG__card {
+  padding: 14px;
+}
+
+.GeneratePanel-module__0838MG__head {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.GeneratePanel-module__0838MG__title {
+  letter-spacing: -.2px;
+  font-weight: 950;
+}
+
+.GeneratePanel-module__0838MG__sub {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.GeneratePanel-module__0838MG__buttons {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  display: flex;
+}
+
+.GeneratePanel-module__0838MG__body {
+  gap: 12px;
+  display: grid;
+}
+
+/*# sourceMappingURL=src_app_components_studio_GeneratePanel_module_css_bad6b30c._.single.css.map*/

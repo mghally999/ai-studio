@@ -1,0 +1,21 @@
+{
+  "/(public)/page": "app/(public)/page.js",
+  "/(studio)/billing/page": "app/(studio)/billing/page.js",
+  "/(studio)/content/page": "app/(studio)/content/page.js",
+  "/(studio)/images/page": "app/(studio)/images/page.js",
+  "/(studio)/projects/page": "app/(studio)/projects/page.js",
+  "/(studio)/prompts/page": "app/(studio)/prompts/page.js",
+  "/(studio)/studio/page": "app/(studio)/studio/page.js",
+  "/(studio)/videos/page": "app/(studio)/videos/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/content/generate/route": "app/api/content/generate/route.js",
+  "/api/health/route": "app/api/health/route.js",
+  "/api/images/generate/route": "app/api/images/generate/route.js",
+  "/api/images/providers/route": "app/api/images/providers/route.js",
+  "/api/prompts/[id]/route": "app/api/prompts/[id]/route.js",
+  "/api/prompts/route": "app/api/prompts/route.js",
+  "/api/videos/generate/route": "app/api/videos/generate/route.js",
+  "/api/videos/providers/route": "app/api/videos/providers/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

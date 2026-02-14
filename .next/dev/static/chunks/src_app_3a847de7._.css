@@ -1,0 +1,241 @@
+/* [project]/src/app/components/ui/Card.module.css [app-client] (css) */
+.Card-module__qLhDLW__card {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  padding: 14px;
+}
+
+/* [project]/src/app/components/studio/GeneratePanel.module.css [app-client] (css) */
+.GeneratePanel-module__0838MG__card {
+  padding: 14px;
+}
+
+.GeneratePanel-module__0838MG__head {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.GeneratePanel-module__0838MG__title {
+  letter-spacing: -.2px;
+  font-weight: 950;
+}
+
+.GeneratePanel-module__0838MG__sub {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.GeneratePanel-module__0838MG__buttons {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  display: flex;
+}
+
+.GeneratePanel-module__0838MG__body {
+  gap: 12px;
+  display: grid;
+}
+
+/* [project]/src/app/components/studio/PromptComposer.module.css [app-client] (css) */
+.PromptComposer-module__FkCOCG__wrap {
+  gap: 10px;
+  display: grid;
+}
+
+.PromptComposer-module__FkCOCG__top {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  display: flex;
+}
+
+.PromptComposer-module__FkCOCG__title {
+  letter-spacing: -.2px;
+  font-weight: 950;
+}
+
+.PromptComposer-module__FkCOCG__sub {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.PromptComposer-module__FkCOCG__actions {
+  gap: 8px;
+  display: flex;
+}
+
+.PromptComposer-module__FkCOCG__chips {
+  flex-wrap: wrap;
+  gap: 8px;
+  display: flex;
+}
+
+.PromptComposer-module__FkCOCG__chip {
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  transition: transform .14s, background .14s;
+}
+
+.PromptComposer-module__FkCOCG__chip:hover {
+  background: color-mix(in srgb, var(--panel2) 70%, transparent);
+  transform: translateY(-1px);
+}
+
+.PromptComposer-module__FkCOCG__textarea {
+  resize: vertical;
+  border: 1px solid var(--stroke);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  min-height: 170px;
+  color: var(--text);
+  border-radius: 18px;
+  outline: none;
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.PromptComposer-module__FkCOCG__textarea:focus {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--stroke));
+  background: color-mix(in srgb, var(--panel2) 75%, transparent);
+}
+
+/* [project]/src/app/(studio)/images/images.module.css [app-client] (css) */
+.images-module__J1qaHG__page {
+  gap: 14px;
+  display: grid;
+}
+
+.images-module__J1qaHG__grid {
+  grid-template-columns: .95fr 1.05fr;
+  gap: 14px;
+  display: grid;
+}
+
+.images-module__J1qaHG__left {
+  padding: 14px;
+}
+
+.images-module__J1qaHG__right {
+  gap: 12px;
+  display: grid;
+}
+
+.images-module__J1qaHG__header {
+  margin-bottom: 12px;
+}
+
+.images-module__J1qaHG__title {
+  letter-spacing: -.2px;
+  font-size: 16px;
+  font-weight: 950;
+}
+
+.images-module__J1qaHG__sub {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.images-module__J1qaHG__tplList {
+  gap: 10px;
+  display: grid;
+}
+
+.images-module__J1qaHG__tpl {
+  text-align: left;
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  cursor: pointer;
+  border: 1px solid #0000;
+  border-radius: 18px;
+  padding: 12px;
+  transition: transform .16s, border-color .16s, background .16s;
+}
+
+.images-module__J1qaHG__tpl:hover {
+  border-color: var(--stroke);
+  background: color-mix(in srgb, var(--panel2) 72%, transparent);
+  transform: translateY(-1px);
+}
+
+.images-module__J1qaHG__tplActive {
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--stroke));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, var(--panel2)), color-mix(in srgb, var(--accent2) 8%, var(--panel)));
+  box-shadow: 0 18px 70px #00000040;
+}
+
+.images-module__J1qaHG__tplTop {
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.images-module__J1qaHG__tplTitle {
+  font-weight: 950;
+}
+
+.images-module__J1qaHG__tplDot {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  opacity: .9;
+  border-radius: 999px;
+  width: 10px;
+  height: 10px;
+}
+
+.images-module__J1qaHG__tplSub {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.images-module__J1qaHG__controls {
+  gap: 10px;
+  margin-top: 12px;
+  display: grid;
+}
+
+.images-module__J1qaHG__row {
+  grid-template-columns: 1fr;
+  gap: 10px;
+  display: grid;
+}
+
+.images-module__J1qaHG__row2 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  display: grid;
+}
+
+.images-module__J1qaHG__label {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media (max-width: 1100px) {
+  .images-module__J1qaHG__grid, .images-module__J1qaHG__row2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=src_app_3a847de7._.css.map*/

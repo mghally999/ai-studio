@@ -1,103 +1,59 @@
 .wrap {
-  display: grid;
-  gap: 10px;
-}
-
-.head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-}
-.title {
-  font-weight: 950;
-}
-.sub {
-  margin-top: 6px;
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.6;
+  margin-top: 24px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: 420px 1fr;
+  gap: 20px;
+  align-items: start;
 }
 
 .card {
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--stroke);
-  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 18px;
   overflow: hidden;
-  transition:
-    transform 160ms ease,
-    background 160ms ease,
-    border-color 160ms ease;
+  transition: 0.2s ease;
 }
+
 .card:hover {
-  transform: translateY(-2px);
-  background: color-mix(in srgb, var(--panel2) 72%, transparent);
-  border-color: color-mix(in srgb, var(--accent) 30%, var(--stroke));
+  transform: translateY(-4px);
+  border-color: #3b82f6;
 }
 
 .preview {
   position: relative;
-  height: 150px;
-  background:
-    radial-gradient(
-      circle at 30% 30%,
-      color-mix(in srgb, var(--accent) 30%, transparent),
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at 70% 30%,
-      color-mix(in srgb, var(--accent2) 30%, transparent),
-      transparent 60%
-    );
+  aspect-ratio: 16/9;
+  background: #000;
 }
-.previewInner {
-  position: absolute;
-  inset: 10px;
-  border-radius: 16px;
-  border: 1px solid var(--stroke);
-  background: color-mix(in srgb, var(--panel2) 60%, transparent);
+
+.media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .badge {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 11px;
-  font-weight: 950;
-  padding: 6px 10px;
+  top: 12px;
+  left: 12px;
+  background: #2563eb;
+  padding: 4px 10px;
   border-radius: 999px;
-  border: 1px solid var(--stroke);
-  background: color-mix(in srgb, var(--panel) 75%, transparent);
-}
-
-.meta {
-  padding: 12px;
-  display: grid;
-  gap: 6px;
-}
-.name {
-  font-weight: 950;
-}
-.desc {
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.55;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .actions {
-  padding: 0 12px 12px;
+  padding: 16px;
   display: flex;
-  gap: 8px;
+  justify-content: flex-end;
 }
 
-@media (max-width: 1100px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+.textBox {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
 }

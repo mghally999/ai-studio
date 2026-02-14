@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/globals.css"],"sourcesContent":["@import \"../styles/tokens.css\";\n\n* {\n  box-sizing: border-box;\n}\nhtml,\nbody {\n  height: 100%;\n}\n\nbody {\n  margin: 0;\n  background:\n    radial-gradient(\n      1200px 700px at 12% 12%,\n      color-mix(in srgb, var(--accent) 18%, transparent),\n      transparent 60%\n    ),\n    radial-gradient(\n      900px 600px at 82% 18%,\n      color-mix(in srgb, var(--accent2) 16%, transparent),\n      transparent 58%\n    ),\n    var(--bg);\n  color: var(--text);\n  font-family:\n    var(--font-ui),\n    ui-sans-serif,\n    system-ui,\n    -apple-system,\n    Segoe UI,\n    Roboto,\n    Arial;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n"],"names":[],"mappings":"AAEA;;;;AAGA;;;;AAKA;;;;;;;AAyBA"}}]
+}

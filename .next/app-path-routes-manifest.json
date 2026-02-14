@@ -1,0 +1,21 @@
+{
+  "/(public)/page": "/",
+  "/(studio)/billing/page": "/billing",
+  "/(studio)/content/page": "/content",
+  "/(studio)/images/page": "/images",
+  "/(studio)/projects/page": "/projects",
+  "/(studio)/prompts/page": "/prompts",
+  "/(studio)/studio/page": "/studio",
+  "/(studio)/videos/page": "/videos",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/content/generate/route": "/api/content/generate",
+  "/api/health/route": "/api/health",
+  "/api/images/generate/route": "/api/images/generate",
+  "/api/images/providers/route": "/api/images/providers",
+  "/api/prompts/[id]/route": "/api/prompts/[id]",
+  "/api/prompts/route": "/api/prompts",
+  "/api/videos/generate/route": "/api/videos/generate",
+  "/api/videos/providers/route": "/api/videos/providers",
+  "/favicon.ico/route": "/favicon.ico"
+}

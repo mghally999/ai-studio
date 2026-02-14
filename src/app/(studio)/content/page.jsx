@@ -4,222 +4,206 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 
 import Card from "../../components/ui/Card";
-import Tabs from "../../components/ui/Tabs";
-import Input from "../../components/ui/Input";
 import Select from "../../components/ui/Select";
 import GeneratePanel from "../../components/studio/GeneratePanel";
 import PromptComposer from "../../components/studio/PromptComposer";
-import ResultsGrid from "../../components/studio/ResultsGrid";
 
 import styles from "./content.module.css";
 
 const TEMPLATES = [
   {
     id: "ad",
-    title: "High-converting ad copy",
-    subtitle: "Hook + benefits + CTA (performance style)",
+    title: "High-Converting Ad Copy",
+    subtitle: "Hooks + Benefits + CTA",
     prompt:
-      "Write a high-converting ad for: {product/service}. Audience: {audience}. Goal: {goal}. Tone: {tone}. Include 3 hooks, 5 benefits, and 3 CTAs. Keep it {length}.",
+      "Write a high-converting ad for {product}. Target audience: {audience}. Pain points: {pain}. Tone: {tone}. Include 3 strong hooks, 5 persuasive benefits, social proof, urgency trigger, and 3 CTAs.",
   },
   {
     id: "script",
-    title: "Short video script (TikTok/Reels)",
-    subtitle: "0–3s hook → story → CTA",
+    title: "Short Viral Script",
+    subtitle: "Hook → Pattern Interrupt → CTA",
     prompt:
-      "Write a short video script (15–30s) about: {topic}. Target: {audience}. Tone: {tone}. Include hook (0–3s), 3 beats, and CTA. Output as timed lines.",
+      "Write a viral 20-second short-form video script about {topic}. Include a 2-second hook, a pattern interrupt, emotional trigger, and a strong CTA. Make it optimized for TikTok/Reels.",
+  },
+  {
+    id: "landing",
+    title: "Landing Page Copy",
+    subtitle: "Hero → Features → Objections → CTA",
+    prompt:
+      "Write a high-converting landing page for {product}. Include headline, subheadline, value proposition, benefits, objection handling, testimonials, and CTA.",
   },
   {
     id: "email",
-    title: "Cold outreach email",
-    subtitle: "Personalized + value + next step",
+    title: "Cold Email Sequence",
+    subtitle: "Initial + 2 Follow-ups",
     prompt:
-      "Write a cold email to {persona} about {offer}. Pain: {pain}. Value: {value}. Tone: {tone}. Keep it {length}. Add a subject line + 2 follow-ups.",
+      "Write a cold outreach email to {persona} offering {service}. Include subject line and 2 follow-up emails spaced 3 days apart. Make it concise and personalized.",
   },
   {
-    id: "blog",
-    title: "Blog outline + SEO structure",
-    subtitle: "H1/H2 + FAQs + meta description",
+    id: "thread",
+    title: "Twitter/X Thread",
+    subtitle: "Hook + Story + Takeaways",
     prompt:
-      "Create a blog outline for keyword: {keyword}. Audience: {audience}. Tone: {tone}. Include H1, 6 H2s, FAQs, and a meta description. Provide bullet points under each section.",
+      "Write a viral Twitter thread about {topic}. Include a strong hook, storytelling structure, valuable insights, and a powerful closing tweet.",
+  },
+  {
+    id: "seo",
+    title: "SEO Blog Article",
+    subtitle: "Structured + Optimized",
+    prompt:
+      "Write a 1200-word SEO optimized blog article for keyword: {keyword}. Include H1, H2s, FAQs, meta description, and internal linking suggestions.",
+  },
+  {
+    id: "sales",
+    title: "Sales Script",
+    subtitle: "Consultative selling format",
+    prompt:
+      "Write a sales call script for selling {product}. Include rapport building, discovery questions, objection handling, and closing technique.",
   },
 ];
 
 export default function ContentPage() {
   const rootRef = useRef(null);
 
-  const [activeTemplateId, setActiveTemplateId] = useState("ad");
+  // MOUNT STATE (must be declared with other hooks)
+  const [mounted, setMounted] = useState(false);
+
+  const [tplId, setTplId] = useState("ad");
   const [tone, setTone] = useState("Premium");
   const [length, setLength] = useState("Medium");
-  const [language, setLanguage] = useState("English");
-  const [brief, setBrief] = useState("");
-
   const [prompt, setPrompt] = useState(TEMPLATES[0].prompt);
 
-  const tpl = useMemo(
-    () => TEMPLATES.find((t) => t.id === activeTemplateId) || TEMPLATES[0],
-    [activeTemplateId],
-  );
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const tpl = useMemo(() => TEMPLATES.find((t) => t.id === tplId), [tplId]);
 
   useEffect(() => {
-    setPrompt(tpl.prompt);
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (tpl) setPrompt(tpl.prompt);
   }, [tpl]);
 
   useEffect(() => {
+    if (!mounted) return;
+
     const el = rootRef.current;
     if (!el) return;
-    const ctx = gsap.context(() => {
-      gsap.from("[data-anim='card']", {
-        y: 14,
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.08,
-        ease: "power3.out",
+
+    const targets = el.querySelectorAll("[data-anim='card']");
+    if (!targets.length) return;
+
+    gsap.from(targets, {
+      y: 12,
+      opacity: 0,
+      duration: 0.4,
+    });
+  }, [mounted]);
+
+  async function onGenerate() {
+    try {
+      setLoading(true);
+      setError("");
+      setResults([]);
+
+      const finalPrompt = `${prompt}
+Tone: ${tone}
+Length: ${length}`;
+
+      const res = await fetch("/api/content/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: finalPrompt }),
       });
-    }, el);
-    return () => ctx.revert();
-  }, []);
 
-  const results = useMemo(
-    () =>
-      Array.from({ length: 6 }).map((_, i) => ({
-        id: `c-${i}`,
-        title: `Output Draft ${i + 1}`,
-        subtitle: `${language} • ${tone} • ${length}`,
-      })),
-    [tone, length, language],
-  );
+      const data = await res.json();
 
-  function onGenerate() {
-    // UI-only now
-    // later: call /api/content/generate
-    // for now just pulse animation
-    const el = rootRef.current;
-    if (!el) return;
-    gsap.fromTo(
-      el.querySelector("[data-anim='results']"),
-      { opacity: 0.5, y: 8 },
-      { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
-    );
+      if (!res.ok) {
+        throw new Error(data?.error || "Content generation failed");
+      }
+
+      setResults([
+        {
+          id: "1",
+          content: data.result,
+        },
+      ]);
+    } catch (err) {
+      console.error(err);
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
     <div className={styles.page} ref={rootRef}>
-      <div className={styles.grid}>
-        <Card className={styles.left} data-anim="card">
-          <div className={styles.header}>
-            <div>
-              <div className={styles.title}>Content Generation</div>
-              <div className={styles.sub}>
-                Choose a template → refine → generate outputs (API later).
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.tplList}>
-            {TEMPLATES.map((t) => {
-              const active = t.id === activeTemplateId;
-              return (
+      {mounted && (
+        <div className={styles.grid}>
+          <Card className={styles.left} data-anim="card">
+            <div className={styles.tplList}>
+              {TEMPLATES.map((t) => (
                 <button
                   key={t.id}
-                  type="button"
-                  className={`${styles.tpl} ${active ? styles.tplActive : ""}`}
-                  onClick={() => setActiveTemplateId(t.id)}
+                  className={`${styles.tpl} ${
+                    tplId === t.id ? styles.active : ""
+                  }`}
+                  onClick={() => setTplId(t.id)}
                 >
-                  <div className={styles.tplTop}>
-                    <div className={styles.tplTitle}>{t.title}</div>
-                    <div className={styles.tplDot} />
-                  </div>
+                  <div className={styles.tplTitle}>{t.title}</div>
                   <div className={styles.tplSub}>{t.subtitle}</div>
                 </button>
-              );
-            })}
-          </div>
-
-          <div className={styles.controls}>
-            <div className={styles.row}>
-              <div>
-                <div className={styles.label}>Tone</div>
-                <Select value={tone} onChange={(e) => setTone(e.target.value)}>
-                  <option>Premium</option>
-                  <option>Direct</option>
-                  <option>Friendly</option>
-                  <option>Luxury</option>
-                  <option>Minimal</option>
-                  <option>Bold</option>
-                </Select>
-              </div>
-              <div>
-                <div className={styles.label}>Length</div>
-                <Select
-                  value={length}
-                  onChange={(e) => setLength(e.target.value)}
-                >
-                  <option>Short</option>
-                  <option>Medium</option>
-                  <option>Long</option>
-                </Select>
-              </div>
+              ))}
             </div>
 
-            <div className={styles.row}>
-              <div>
-                <div className={styles.label}>Language</div>
-                <Select
-                  value={language}
-                  onChange={(e) => setLanguage(e.target.value)}
-                >
-                  <option>English</option>
-                  <option>Arabic</option>
-                </Select>
-              </div>
-              <div>
-                <div className={styles.label}>Brief (optional)</div>
-                <Input
-                  value={brief}
-                  onChange={(e) => setBrief(e.target.value)}
-                  placeholder="e.g., New product launch, target busy professionals…"
-                />
-              </div>
+            <div className={styles.controls}>
+              <Select value={tone} onChange={(e) => setTone(e.target.value)}>
+                <option>Premium</option>
+                <option>Bold</option>
+                <option>Minimal</option>
+              </Select>
+
+              <Select
+                value={length}
+                onChange={(e) => setLength(e.target.value)}
+              >
+                <option>Short</option>
+                <option>Medium</option>
+                <option>Long</option>
+              </Select>
             </div>
-          </div>
-        </Card>
+          </Card>
 
-        <div className={styles.right}>
-          <GeneratePanel
-            title="Composer"
-            subtitle="Templates + prompt builder + future provider execution."
-            onGenerate={onGenerate}
-            onSecondary={() => {
-              // later: save to prompts store / api
-              gsap.fromTo(
-                rootRef.current,
-                { opacity: 0.92 },
-                { opacity: 1, duration: 0.2 },
-              );
-            }}
-            primaryLabel="Generate Content"
-            secondaryLabel="Save Template"
-          >
-            <PromptComposer
-              title="Prompt"
-              value={prompt}
-              onChange={setPrompt}
-              placeholder="Write your content prompt…"
-              quickChips={[
-                "Make it more persuasive.",
-                "Add strong hooks.",
-                "Use bullet points.",
-                "Add 3 CTAs.",
-                "Make it shorter.",
-              ]}
-            />
-          </GeneratePanel>
+          <div className={styles.right}>
+            <GeneratePanel
+              title="Composer"
+              subtitle="Generate AI content"
+              onGenerate={onGenerate}
+              primaryLabel="Generate Content"
+            >
+              <PromptComposer
+                title="Prompt"
+                value={prompt}
+                onChange={setPrompt}
+              />
+            </GeneratePanel>
 
-          <div data-anim="results">
-            <ResultsGrid items={results} kind="text" />
+            <div className={styles.results}>
+              {loading && <div>Generating...</div>}
+              {error && <div className={styles.error}>{error}</div>}
+
+              {results.map((r) => (
+                <Card key={r.id} className={styles.resultCard}>
+                  <pre>{r.content}</pre>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
